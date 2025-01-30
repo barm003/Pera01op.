@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>อั่งเปาโชคลาภ 🧧</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🧧 เปิดอั่งเปาแห่งความรัก! 🧧</h1>
+        <p id="lucky-message" class="hidden"></p>
+        <button onclick="revealMessage()">เปิดอั่งเปา</button>
+        <button onclick="goBack()">กลับไปหน้าแรก</button>
+    </div>
+    <script>
+        function revealMessage() {
+            let messages = [
+                "วันนี้จะได้รับกอดฟรี 10 ครั้ง! 🤗",
+                "แฟนจะต้องพาไปเดต! 💕",
+                "โชคดีเรื่องความรักตลอดปี! ❤️",
+                "เธอคือโชคลาภที่ยิ่งใหญ่ที่สุดของฉัน! 🧧",
+                "ขอให้รักของเราแข็งแรงเหมือนกำแพงเมืองจีน! 🏯"
+            ];
+            let randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            let messageElement = document.getElementById("lucky-message");
+            messageElement.innerText = randomMessage;
+            messageElement.classList.remove("hidden");
+            messageElement.classList.add("fade-in");
+        }
+        function goBack() {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>

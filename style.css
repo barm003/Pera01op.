@@ -1,0 +1,92 @@
+body {
+    background-color: #d0021b;
+    color: gold;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+.container {
+    margin: 50px auto;
+    padding: 20px;
+    border: 5px solid gold;
+    width: 80%;
+    max-width: 500px;
+    background: #900000;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px gold;
+}
+
+button {
+    background-color: gold;
+    color: red;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #ffcc00;
+}
+
+/* ซ่อนข้อความก่อนแสดง */
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* แอนิเมชันข้อความค่อยๆ ปรากฏ */
+.fade-in {
+    animation: fadeIn 1.5s forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; visibility: hidden; }
+    100% { opacity: 1; visibility: visible; }
+}
+
+.hidden {
+    display: none;
+}
+
+.fade-in {
+    animation: fadeIn 2s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+img {
+    position: absolute;
+    width: 400px; /* ขนาดของรูปภาพ สามารถปรับได้ */
+    height: 400px; /* ขนาดของรูปภาพ สามารถปรับได้ */
+}
+
+#top-left {
+    top: 50px;  /* ลดระยะห่างจากด้านบน */
+    left: 50px; /* ลดระยะห่างจากด้านซ้าย */
+}
+
+#top-right {
+    top: 50px;  /* ลดระยะห่างจากด้านบน */
+    right: 50px; /* ลดระยะห่างจากด้านขวา */
+}
+
+#bottom-left {
+    bottom: 50px; /* ลดระยะห่างจากด้านล่าง */
+    left: 500px;   /* ลดระยะห่างจากด้านซ้าย */
+}
+
+#bottom-right {
+    bottom: 50px; /* ลดระยะห่างจากด้านล่าง */
+    right: 500px;  /* ลดระยะห่างจากด้านขวา */
+}
+

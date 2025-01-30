@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เซอร์ไพรส์!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container" id="surprise-container">
+        <h1 id="surprise-title">เซอร์ไพรส์นี้เป็นคำอวยพรจากพี่นะอยากให้เป็นจริงมากๆ</h1>
+        <p class="surprise-text hidden">ขอบคุณที่เป็นกำลังให้พี่มาเสมอนะที่รักเป็นคนที่ค่อยเป็นกำลังใจให้พี่เสมอเลย</p>
+        <p class="surprise-text hidden">ไม่รู้เลยว่าพี่จะสามารถตอบเเทนความดีทีที่รักมีให้พี่เเบบไหน</p>
+        <p class="surprise-text hidden">ดื้อกับพี่ได้เยอะๆเลยนะเป็นตัวเองเยอะๆใช่ชีวิตให้มีความสุข</p>
+        <p class="surprise-text hidden">หนูเป็นคนที่สวยเเละมีเสน่ห์มากเลยครั้งเเรกที่เจอหนูมีตกหลุมรักเลย</p>
+        <p class="surprise-text hidden">บ่นมาหลายเรื่องปีนี้พี่ขอให้หนูมีความสุขนะรักมายนะคนเก่ง</p>
+
+        <!-- เพิ่มรูปภาพที่มุมต่างๆ -->
+        <img id="top-left" src="img/1112.jpg" class="hidden" alt="Top Left Image">
+        <img id="top-right" src="img/1113.jpg" class="hidden" alt="Top Right Image">
+        <img id="bottom-left" src="img/1114.jpg" class="hidden" alt="Bottom Left Image">
+        <img id="bottom-right" src="img/1115.jpg" class="hidden" alt="Bottom Right Image">
+
+        <button onclick="goBack()">กลับไปหน้าแรก</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let texts = document.querySelectorAll(".surprise-text");
+            texts.forEach((text, index) => {
+                setTimeout(() => {
+                    text.classList.remove("hidden");
+                    text.classList.add("fade-in");
+                }, 1000 * (index + 1)); // ค่อยๆ แสดงข้อความทีละอัน
+            });
+
+            // เพิ่มรูปภาพที่มุมต่างๆ
+            setTimeout(() => {
+                document.getElementById("top-left").classList.remove("hidden");
+                document.getElementById("top-left").classList.add("fade-in");
+            }, 1000 * (texts.length + 1));
+
+            setTimeout(() => {
+                document.getElementById("top-right").classList.remove("hidden");
+                document.getElementById("top-right").classList.add("fade-in");
+            }, 1000 * (texts.length + 2));
+
+            setTimeout(() => {
+                document.getElementById("bottom-left").classList.remove("hidden");
+                document.getElementById("bottom-left").classList.add("fade-in");
+            }, 1000 * (texts.length + 3));
+
+            setTimeout(() => {
+                document.getElementById("bottom-right").classList.remove("hidden");
+                document.getElementById("bottom-right").classList.add("fade-in");
+            }, 1000 * (texts.length + 4));
+        });
+
+        function goBack() {
+            window.location.href = "index.html"; // กลับไปหน้าแรก
+        }
+    </script>
+
+</body>
+</html>
